@@ -1,11 +1,32 @@
+# ~/.zshrc
+
+# ------ #
+# prompt #
+# ------ #
+
+export PS1=" ⏩  "
+alias c="clear"
+
 # --------- #
 # directory #
 # --------- #
 
-alias cdt="cd ~/Turing"
+alias ls="ls -GF"
+alias cdt="cd ~/Turing/2module/"
 alias cdtp="cd ~/Turing/2module/projects/"
 alias ..="cd .."
-alias cl="clear"
+alias cd..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias md="mkdir -p"
+alias rd="rmdir"
+
+# ---- #
+# atom #
+# ---- #
+
+alias a='atom'
+alias ah='atom .'
 
 # --- #
 # git #
@@ -15,8 +36,9 @@ alias gd="git diff"
 alias gs="git status"
 alias ga="git add"
 alias gc="git checkout"
-alias pm="git pull origin master"
-alias com="git checkout master"
+alias gpom="git pull origin master"
+alias gcm="git checkout master"
+alias gba="git branch -a"                        # show branches
 alias grv="git remote -v"                        # show remotes
 alias gbr="git browse"                           # open repo on github
 alias gcb="git checkout -b"                      # create and checkout to new branch
@@ -39,18 +61,21 @@ function gcm() {
 # rails #
 # ----- #
 
-alias bi= "bundle install"
-alias test= "bundle exec rspec"
-alias be= "bundle exec"
-alias seed= "bundle exec rake db:reset"
-alias drop= "bundle exec rake db:drop"
-alias migrate= "bundle exec rake db:migrate"
-alias load = "bundle exec rake db:schema:load"
-alias server= "bundle exec rails s"
+alias r="rails"
+alias rg="rails g"
+alias rs="rails s"
+alias rc="rails c"
+alias bi="bundle install"
+alias ber="bundle exec rspec"
+alias be="bundle exec"
+alias seed="bundle exec rake db:reset"
+alias drop="bundle exec rake db:drop"
+alias migrate="bundle exec rake db:migrate"
+alias load="bundle exec rake db:schema:load"
+alias server="bundle exec rails s"
 
 # ------ #
 # heroku #
 # ------ #
 
-alias setupheroku= "heroku run rake db:setup"        # migrate & seed 
-
+alias setupheroku= "heroku run rake db:setup"        # migrate & seed
