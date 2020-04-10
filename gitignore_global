@@ -1,3 +1,5 @@
+# ~/. gitignore_global
+
 # always-ignore extensions #
 ############################
 *.diff
@@ -76,6 +78,4 @@ rerun.txt
 pickle-email-*.html
 .byebug_history
 
-
-
-
+# git config --global core.excludesfile ~/.gitignore_global
